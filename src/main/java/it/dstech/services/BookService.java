@@ -17,4 +17,8 @@ public class BookService {
 	public List<Book> list() {
 		return (List<Book>)bookRepository.findAll();
 	}
+	
+	public Book getFirst(String name) {
+		return bookRepository.findByName(name).get(0);
+	}
 }
